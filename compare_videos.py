@@ -14,7 +14,7 @@ data = {
 }
 
 # Make initial request
-response = requests.post(API_URL, files=data, params={'api_key': API_KEY})
+response = requests.post(API_URL, data=data, params={'api_key': API_KEY})
 
 if response.status_code == 200:
     response_data = response.json()
